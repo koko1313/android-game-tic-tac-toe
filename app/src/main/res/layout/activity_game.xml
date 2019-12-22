@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.velichkov.kaloyan.tic_tac_toe.GameActivity"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:weightSum="100"
+    android:gravity="center_horizontal"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:text="Ред е на"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/whosTurnTextView"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            app:srcCompat="@drawable/tictactoex"
+            android:id="@+id/whosTurnImageView"
+            android:layout_marginLeft="5dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            tools:ignore="ContentDescription,RtlHardcoded"
+            android:contentDescription="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:gravity="center_vertical|center_horizontal">
+
+        <RelativeLayout
+            android:layout_height="370dp"
+            android:background="@android:color/darker_gray"
+            android:padding="10dp"
+            android:layout_width="370dp"
+            android:id="@+id/gameArea"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/r1c1"
+                android:background="@android:color/background_light"
+                android:contentDescription=""
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/r1c2"
+                android:layout_marginLeft="120dp"
+                android:background="@android:color/background_light"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                android:contentDescription="" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/r1c3"
+                android:layout_marginLeft="240dp"
+                android:background="@android:color/background_light"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                android:contentDescription="" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/r2c1"
+                android:layout_marginTop="120dp"
+                android:background="@android:color/background_light"
+                android:contentDescription=""
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/r2c2"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="120dp"
+                android:background="@android:color/background_light"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                android:contentDescription="" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/r2c3"
+                android:layout_marginLeft="240dp"
+                android:layout_marginTop="120dp"
+                android:background="@android:color/background_light"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                android:contentDescription="" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/r3c1"
+                android:layout_marginTop="240dp"
+                android:background="@android:color/background_light"
+                android:contentDescription=""
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/r3c2"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="240dp"
+                android:background="@android:color/background_light"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                android:contentDescription="" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/r3c3"
+                android:layout_marginLeft="240dp"
+                android:layout_marginTop="240dp"
+                android:background="@android:color/background_light"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                android:contentDescription="" />
+
+            <ImageView
+                android:layout_width="300dp"
+                app:srcCompat="@drawable/winner_line"
+                android:id="@+id/winnerLineR1"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="25dp"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                android:contentDescription="" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/winner_line"
+                android:id="@+id/winnerLineR2"
+                android:layout_width="300dp"
+                android:layout_marginTop="170dp"
+                android:layout_marginLeft="25dp"
+                android:visibility="gone"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                android:contentDescription="" />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/winner_line"
+                android:id="@+id/winnerLineR3"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="290dp"
+                android:visibility="gone"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <ImageView
+                app:srcCompat="@drawable/winner_line_vertical"
+                android:id="@+id/winnerLineC1"
+                android:layout_height="300dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="25dp"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                android:contentDescription="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                app:srcCompat="@drawable/winner_line_vertical"
+                android:id="@+id/winnerLineC2"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="170dp"
+                android:visibility="gone"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                android:contentDescription="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                app:srcCompat="@drawable/winner_line_vertical"
+                android:id="@+id/winnerLineC3"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="290dp"
+                android:visibility="gone"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/winner_line"
+                android:id="@+id/winnerLineDR"
+                android:layout_marginTop="175dp"
+                android:rotation="45"
+                android:layout_width="350dp"
+                android:visibility="gone"
+                android:contentDescription=""
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/winner_line"
+                android:id="@+id/winnerLineDL"
+                android:layout_marginTop="175dp"
+                android:rotation="-45"
+                android:layout_width="350dp"
+                android:visibility="gone"
+                android:contentDescription=""
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
